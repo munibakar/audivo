@@ -16,12 +16,15 @@
     <header>
         <nav>
             <div class="logo">
-                <img src="audivo-logo.png" alt="Audivo Logo">
-                <h1>Audivo</h1>
+                <a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">
+                    <img src="audivo-logo.png" alt="Audivo Logo">
+                    <h1>Audivo</h1>
+                </a>
             </div>
             <ul class="nav-links">
-                <li><a href="#features">Özellikler</a></li>
-                <li><a href="#about">Hakkında</a></li>
+                <li><a href="#features">Neler Sunuyoruz?</a></li>
+                <li><a href="#about">Nasıl Çalışır?</a></li>
+                <li><a href="#screenshots">Arayüz</a></li>
             </ul>
             <div class="mobile-menu">
                 <i class="fas fa-bars"></i>
@@ -52,47 +55,47 @@
         </section>
 
         <section id="features">
-            <div class="section-header">
+            <div class="section-header reveal">
                 <h2>Neler Sunuyoruz?</h2>
                 <p>Audivo ile duygu analizi artık çok daha kolay</p>
             </div>
             <div class="features-grid">
-                <div class="feature-card">
+                <div class="feature-card reveal reveal-delay-1">
                     <i class="fas fa-microphone"></i>
                     <h3>Ses Testi</h3>
                     <p>Ses kayıtları üzerinden kapsamlı duygu analizi</p>
                 </div>
-                <div class="feature-card">
+                <div class="feature-card reveal reveal-delay-2">
                     <i class="fas fa-video"></i>
                     <h3>Video Testi</h3>
                     <p>Görüntü tabanlı detaylı duygu analizi</p>
                 </div>
-                <div class="feature-card">
+                <div class="feature-card reveal reveal-delay-3">
                     <i class="fas fa-mask"></i>
                     <h3>Maskeli Video Testi</h3>
                     <p>Maske kullanımında bile doğru duygu analizi</p>
                 </div>
-                <div class="feature-card">
+                <div class="feature-card reveal reveal-delay-4">
                     <i class="fas fa-chart-line"></i>
                     <h3>Analiz Grafikleri</h3>
                     <p>Detaylı test sonuçları ve interaktif görselleştirmeler</p>
                 </div>
-                <div class="feature-card">
+                <div class="feature-card reveal reveal-delay-1">
                     <i class="fas fa-user-md"></i>
                     <h3>Doktor Arayüzü</h3>
                     <p>Hasta yönetimi, test uygulama ve sonuç analizi için özel panel</p>
                 </div>
-                <div class="feature-card">
+                <div class="feature-card reveal reveal-delay-2">
                     <i class="fas fa-user"></i>
                     <h3>Hasta Arayüzü</h3>
                     <p>Test uygulaması ve sonuç takibi için basitleştirilmiş panel</p>
                 </div>
-                <div class="feature-card">
+                <div class="feature-card reveal reveal-delay-3">
                     <i class="fas fa-notes-medical"></i>
                     <h3>Not Sistemi</h3>
                     <p>Hasta notları ve detaylı takip kayıtları</p>
                 </div>
-                <div class="feature-card">
+                <div class="feature-card reveal reveal-delay-4">
                     <i class="fas fa-desktop"></i>
                     <h3>Kullanıcı Dostu Tasarım</h3>
                     <p>Kolay kullanım ve modern tasarım deneyimi</p>
@@ -101,96 +104,106 @@
         </section>
 
         <section id="about">
-            <div class="section-header">
+            <div class="section-header reveal">
                 <h2>Nasıl Çalışır?</h2>
                 <p>Doktorlar ve hastalar için kullanım adımları</p>
             </div>
             <div class="about-content">
-                <div class="workflow-sections">
-                    <div class="workflow-section">
-                        <h3 class="workflow-title">
+                <div class="timeline-container">
+                    <div class="timeline-section reveal reveal-left">
+                        <div class="timeline-header">
                             <i class="fas fa-user-md"></i>
-                            Doktorlar İçin
-                        </h3>
-                        <div class="workflow-container">
-                            <div class="workflow-card">
-                                <div class="step-number">1</div>
-                                <div class="workflow-icon">
-                                    <i class="fas fa-user-plus"></i>
+                            <h3>Doktorlar İçin</h3>
+                        </div>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <div class="timeline-icon">
+                                        <i class="fas fa-user-plus"></i>
+                                    </div>
+                                    <h4>Hesap Oluşturma</h4>
+                                    <p>Doktor hesabınızı oluşturun ve sisteme giriş yapın</p>
                                 </div>
-                                <h3>Hesap Oluşturma</h3>
-                                <p>Doktor hesabınızı oluşturun ve sisteme giriş yapın</p>
                             </div>
-
-                            <div class="workflow-card">
-                                <div class="step-number">2</div>
-                                <div class="workflow-icon">
-                                    <i class="fas fa-users"></i>
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <div class="timeline-icon">
+                                        <i class="fas fa-users"></i>
+                                    </div>
+                                    <h4>Hasta Ekleme</h4>
+                                    <p>Sisteme yeni hasta ekleyin ve bilgilerini girin</p>
                                 </div>
-                                <h3>Hasta Ekleme</h3>
-                                <p>Sisteme yeni hasta ekleyin ve bilgilerini girin</p>
                             </div>
-
-                            <div class="workflow-card">
-                                <div class="step-number">3</div>
-                                <div class="workflow-icon">
-                                    <i class="fas fa-clipboard-list"></i>
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <div class="timeline-icon">
+                                        <i class="fas fa-clipboard-list"></i>
+                                    </div>
+                                    <h4>Test Uygulama</h4>
+                                    <p>Hastanıza ses, video veya maskeli video testi uygulayın</p>
                                 </div>
-                                <h3>Test Uygulama</h3>
-                                <p>Hastanıza ses, video veya maskeli video testi uygulayın</p>
                             </div>
-
-                            <div class="workflow-card">
-                                <div class="step-number">4</div>
-                                <div class="workflow-icon">
-                                    <i class="fas fa-chart-bar"></i>
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <div class="timeline-icon">
+                                        <i class="fas fa-chart-bar"></i>
+                                    </div>
+                                    <h4>Sonuçları İnceleme</h4>
+                                    <p>Test sonuçlarını grafikler ile detaylı inceleyin</p>
                                 </div>
-                                <h3>Sonuçları İnceleme</h3>
-                                <p>Test sonuçlarını grafikler ile detaylı inceleyin</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="workflow-section">
-                        <h3 class="workflow-title">
+                    <div class="timeline-section reveal reveal-right">
+                        <div class="timeline-header">
                             <i class="fas fa-user"></i>
-                            Hastalar İçin
-                        </h3>
-                        <div class="workflow-container">
-                            <div class="workflow-card">
-                                <div class="step-number">1</div>
-                                <div class="workflow-icon">
-                                    <i class="fas fa-user-plus"></i>
+                            <h3>Hastalar İçin</h3>
+                        </div>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <div class="timeline-icon">
+                                        <i class="fas fa-user-plus"></i>
+                                    </div>
+                                    <h4>Hesap Oluşturma</h4>
+                                    <p>Kendi hesabınızı oluşturun ve sisteme giriş yapın</p>
                                 </div>
-                                <h3>Hesap Oluşturma</h3>
-                                <p>Kendi hesabınızı oluşturun ve sisteme giriş yapın</p>
                             </div>
-
-                            <div class="workflow-card">
-                                <div class="step-number">2</div>
-                                <div class="workflow-icon">
-                                    <i class="fas fa-clipboard-list"></i>
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <div class="timeline-icon">
+                                        <i class="fas fa-clipboard-list"></i>
+                                    </div>
+                                    <h4>Test Seçimi</h4>
+                                    <p>İstediğiniz test türünü seçin ve başlatın</p>
                                 </div>
-                                <h3>Test Seçimi</h3>
-                                <p>İstediğiniz test türünü seçin ve başlatın</p>
                             </div>
-
-                            <div class="workflow-card">
-                                <div class="step-number">3</div>
-                                <div class="workflow-icon">
-                                    <i class="fas fa-vial"></i>
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <div class="timeline-icon">
+                                        <i class="fas fa-vial"></i>
+                                    </div>
+                                    <h4>Test Uygulama</h4>
+                                    <p>Seçtiğiniz testi bağımsız olarak uygulayın</p>
                                 </div>
-                                <h3>Test Uygulama</h3>
-                                <p>Seçtiğiniz testi bağımsız olarak uygulayın</p>
                             </div>
-
-                            <div class="workflow-card">
-                                <div class="step-number">4</div>
-                                <div class="workflow-icon">
-                                    <i class="fas fa-chart-line"></i>
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <div class="timeline-icon">
+                                        <i class="fas fa-chart-line"></i>
+                                    </div>
+                                    <h4>Sonuçları Görüntüleme</h4>
+                                    <p>Test sonuçlarınızı ve gelişiminizi takip edin</p>
                                 </div>
-                                <h3>Sonuçları Görüntüleme</h3>
-                                <p>Test sonuçlarınızı ve gelişiminizi takip edin</p>
                             </div>
                         </div>
                     </div>
@@ -199,27 +212,27 @@
         </section>
 
         <section id="screenshots">
-            <div class="section-header">
+            <div class="section-header reveal">
                 <h2>Uygulama Arayüzü</h2>
                 <p>Modern ve kullanıcı dostu tasarım</p>
             </div>
             <div class="app-showcase">
                 <div class="screenshot-grid">
-                    <div class="screenshot-item">
+                    <div class="screenshot-item reveal reveal-delay-1">
                         <img src="screenshot1.png" alt="Doktor Paneli">
                         <div class="screenshot-info">
                             <h3>Doktor Paneli</h3>
                             <p>Hasta yönetimi ve test uygulama ekranı</p>
                         </div>
                     </div>
-                    <div class="screenshot-item">
+                    <div class="screenshot-item reveal reveal-delay-2">
                         <img src="screenshot2.png" alt="Test Ekranı">
                         <div class="screenshot-info">
                             <h3>Test Ekranı</h3>
                             <p>Ses ve video test uygulama arayüzü</p>
                         </div>
                     </div>
-                    <div class="screenshot-item">
+                    <div class="screenshot-item reveal reveal-delay-3">
                         <img src="screenshot3.png" alt="Sonuç Analizi">
                         <div class="screenshot-info">
                             <h3>Sonuç Analizi</h3>
@@ -249,6 +262,25 @@
 
         document.querySelector('.mobile-menu').addEventListener('click', () => {
             document.querySelector('.nav-links').classList.toggle('active');
+        });
+
+        // Scroll Reveal
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach((element) => {
+            observer.observe(element);
         });
     </script>
 </body>
