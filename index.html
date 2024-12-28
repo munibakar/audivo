@@ -260,11 +260,46 @@
             document.querySelector('.preloader').style.display = 'none';
         });
 
+        // Mobile Menu Toggle
         document.querySelector('.mobile-menu').addEventListener('click', () => {
             document.querySelector('.nav-links').classList.toggle('active');
         });
 
-        // Scroll Reveal
+        // Smooth Scroll with Section Animation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                // Close mobile menu if open
+                document.querySelector('.nav-links').classList.remove('active');
+
+                // Get the target section
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                
+                if (targetSection) {
+                    // Remove active class from all sections
+                    document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => {
+                        el.classList.remove('active');
+                    });
+
+                    // Smooth scroll to target
+                    window.scrollTo({
+                        top: targetSection.offsetTop - 80, // Offset for fixed header
+                        behavior: 'smooth'
+                    });
+
+                    // Re-trigger animations for the target section
+                    setTimeout(() => {
+                        targetSection.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => {
+                            el.classList.add('active');
+                        });
+                    }, 500); // Wait for scroll to complete
+                }
+            });
+        });
+
+        // Intersection Observer for scroll animations
         const observerOptions = {
             root: null,
             rootMargin: '0px',
