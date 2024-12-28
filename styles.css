@@ -211,6 +211,51 @@ nav {
     }
 }
 
+/* Logo Click Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.hero-reload .hero-text h1 {
+    animation: fadeInDown 0.8s ease-out forwards;
+}
+
+.hero-reload .hero-text p {
+    animation: fadeInDown 0.8s ease-out 0.2s forwards;
+}
+
+.hero-reload .user-type:first-child {
+    animation: fadeInScale 0.8s ease-out 0.4s forwards;
+}
+
+.hero-reload .user-type:last-child {
+    animation: fadeInScale 0.8s ease-out 0.6s forwards;
+}
+
+.hero-reload .hero-text h1,
+.hero-reload .hero-text p,
+.hero-reload .user-type {
+    opacity: 0;
+}
+
 /* Hero Section */
 #hero {
     padding: 12rem 5% 8rem;

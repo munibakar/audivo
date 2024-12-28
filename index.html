@@ -16,7 +16,7 @@
     <header>
         <nav>
             <div class="logo">
-                <a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">
+                <a href="javascript:void(0)" class="logo-link">
                     <img src="audivo-logo.png" alt="Audivo Logo">
                     <h1>Audivo</h1>
                 </a>
@@ -253,6 +253,38 @@
     <script>
         window.addEventListener('load', () => {
             document.querySelector('.preloader').style.display = 'none';
+        });
+
+        // Logo Click Animation
+        document.querySelector('.logo-link').addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Remove all animation classes
+            const heroSection = document.querySelector('#hero');
+            heroSection.classList.remove('hero-reload');
+            document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => {
+                el.classList.remove('active');
+            });
+
+            // Smooth scroll to top with animation
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+
+            // Re-trigger animations for the hero section
+            setTimeout(() => {
+                // Force a reflow to restart animations
+                void heroSection.offsetWidth;
+                
+                // Add animation class
+                heroSection.classList.add('hero-reload');
+                
+                // Re-trigger other animations
+                heroSection.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => {
+                    el.classList.add('active');
+                });
+            }, 500);
         });
 
         // Mobile Menu Toggle
