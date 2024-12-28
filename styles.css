@@ -778,6 +778,8 @@ footer {
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 .screenshot-item {
@@ -787,6 +789,7 @@ footer {
     box-shadow: 0 15px 30px rgba(26, 35, 126, 0.1);
     transition: all 0.3s ease;
     background: var(--light-bg);
+    height: 100%;
 }
 
 .screenshot-item:hover {
@@ -829,7 +832,7 @@ footer {
     margin: 0;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
     .screenshot-grid {
         grid-template-columns: repeat(2, 1fr);
     }
